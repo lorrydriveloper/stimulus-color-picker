@@ -42,7 +42,7 @@ export default class ColorPicker extends Controller<HTMLElement> {
     if (color) {
       this.inputTarget.value = color.toHEXA().toString()
     }
-
+    this.inputTarget.dispatchEvent(new Event("change"));
     this.picker.hide()
   }
 
